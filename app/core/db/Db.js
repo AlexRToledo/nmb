@@ -2,7 +2,7 @@ global.conection = false;
 
 const mongoose = require('mongoose'),
       Bluebird = require('bluebird'),
-      Models = require('./Models');
+      Models = require('../../db/Models');
 
 class Db{
 

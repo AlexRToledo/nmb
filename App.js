@@ -1,17 +1,15 @@
 const express = require('express'),
-    Express = require('./lib/Express'),
-    Passport = require('./lib/Passport'),
-    Router = require('./routes/Router'),
-    Logger  = require('./lib/Logger'),
-    Db = require('./lib/db/Db'),
-    I18n = require('./lib/i18n'),
+    Express = require('./app/core/Express'),
+    Router = require('./app/Router'),
+    Logger  = require('./app/core/lib/Logger'),
+    Db = require('./app/core/db/Db'),
+    I18n = require('./app/core/lang/i18n'),
     app = express();
 
 class App {
     constructor() {
         Db.Initialize().then(_ =>{
             new Express(app);
-            new Passport(app);
             new Router(app);
             new I18n(app);
 

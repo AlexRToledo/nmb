@@ -1,4 +1,4 @@
-const Session = require('../../../lib/Session'),
+const Session = require('../../core/lib/Session'),
       BaseController = require('./MainController'),
       UserRepository = require('../managers/UserRepository');
 
@@ -11,7 +11,6 @@ class UserController extends BaseController {
 
     Router(path){
         this.app.get(`${path}/login`,               Session.NoAuth,                                                     this.loginPage);
-        this.app.post(`${path}/login`,              passport.authenticate('local', {failureRedirect: 'login', failureFlash: true}), this.login);
         this.app.get(`${path}/create`,                                                                                  this.createUser);
         this.app.post(`${path}/create`,                                                                                 this.createUserAction);
         this.app.get(`${path}/info`,                Session.Auth,                                                       this.userInfo);

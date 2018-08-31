@@ -1,10 +1,6 @@
-const BaseController = require('../../core/base/BaseController'),
-      Mailer = require('../../utils/mailing'),
-      MailRepository = require('../managers/MailRepository'),
-      Manager = new MailRepository();
+const BaseController = require('../../core/base/BaseController');
 // const _18n = require('i18n');
 
-const Mail = new Mailer();
 class MainController extends BaseController {
 
     constructor(app) {

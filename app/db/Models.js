@@ -1,4 +1,4 @@
-const UserModel = require('../../app/main/models/UserModel');
+const UserModel = require('../main/models/UserModel');
 
 class Models {
     constructor(mongoose) {

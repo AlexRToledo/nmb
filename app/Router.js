@@ -1,5 +1,5 @@
-const MainController = require('../app/main/controllers/MainController');
-const UserController = require('../app/main/controllers/UserController');
+const MainController = require('./main/controllers/MainController');
+const UserController = require('./main/controllers/UserController');
 
 class Router {
     constructor(app) {
