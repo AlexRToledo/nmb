@@ -1,0 +1,24 @@
+extends ../layout
+
+block content
+    .container-fluid.login-container
+        .row.justify-content-center.align-items-center(style='height: 100%')
+            .col-xs-12.col-sm-12.col-md-6.col-lg-4.col-xl-2.login-box
+                picture
+                    img.img-fluid(src="/img/logo/logotipo2.svg")
+                form.mt-4.text-center(role='form', method='POST', action="/user/login")
+                    .form-row
+                        .form-group.col
+                            .input-group
+                                input#inputEmail.form-control.custom-input(type='text', placeholder='Username', required='', autofocus='', name='username' aria-describedby="username-addon")
+                                .input-group-append
+                                    span.input-group-text#username-addon.custom-text.fa.fa-user
+                    .form-row
+                        .form-group.col
+                            .input-group
+                                input#inputPassword.form-control.custom-input(type='password', placeholder='Password', required='', name='password')
+                                .input-group-append
+                                    span.input-group-text.custom-text.fa.fa-lock
+                    button.btn.btn-lg.btn-primary.btn-block.custom-button(type='submit') Login
+                    .mt-4.extra-login
+                        a.p-4(href="/") Back to Home

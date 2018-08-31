@@ -1,0 +1,16 @@
+{
+  "mongoUrl": "mongodb://127.0.0.1/nmb",
+  "sessionSecret": "$sh$$sh.20010001010CcccC.shhh$$sss$",
+  "production": false,
+  "db": {
+    "host": "localhost",
+    "port": "27017",
+    "username": "",
+    "password": "",
+    "name" : "nmb"
+  },
+  "server" : {
+    "host": "localhost",
+    "port": "3001"
+  }
+}

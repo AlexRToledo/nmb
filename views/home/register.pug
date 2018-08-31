@@ -1,0 +1,36 @@
+extends ../layout
+
+block nav
+    include ../pages/navbar
+block content
+    header.masthead.text-left.text-white.d-flex.font-arvo
+        .container.my-auto
+            .row
+                .col-lg-6
+                    form(role='form', method='post')
+                        .form-group
+                            label(for='exampleInput1')
+                                | User Name
+                            input#exampleInput1.form-control(type='text', required='')
+                        .form-group
+                            label(for='exampleInputEmail1')
+                                | Email address
+                            input#exampleInputEmail1.form-control(type='email', required='')
+                        .form-group
+                            label(for='exampleInputPassword1')
+                                | Password
+                            input#exampleInputPassword1.form-control(type='password', required='')
+                        .form-group
+                            label(for='exampleInputPassword2')
+                                | Retype Password
+                            input#exampleInputPassword2.form-control(type='password', required='')
+                        br
+                        button.btn.btn-primary(type='submit')
+                            | Register
+                        br
+                        br
+                        a.text-info(href="/login")= 'I already own an account'
+
+
+block footer
+    include ../pages/footer
