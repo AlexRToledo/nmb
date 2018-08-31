@@ -3,7 +3,6 @@ const express = require('express'),
     bodyParser = require('body-parser'),
     path = require('path'),
     helmet = require('helmet'),
-    flash = require('connect-flash'),
     MongoStore = require('connect-mongo')(session);
     logger = require('morgan');
 
@@ -21,8 +20,6 @@ class Express {
         this.app.use(bodyParser.urlencoded({extended: false}));
 
         this.app.use(express.static(path.join(__dirname, './../../public')));
-
-        this.app.use(flash());
 
         this.app.use(session({
             key: 'www.smartico.com',

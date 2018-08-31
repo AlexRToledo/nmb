@@ -10,9 +10,9 @@ class I18n {
         i18n.configure(
             {
                 locales:['en', 'es'],
-                cookie: 'iseeit_cookie',
+                cookie: 'nmb_cookie',
                 register: global,
-                directory: './locales',
+                directory: './../../../locales',
                 defaultLocale: 'en'
             }
         );
